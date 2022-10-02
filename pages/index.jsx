@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
+import { NftCard } from '../Components/nftcard'
 
 const Home= () => {
   const [wallet ,setwalletaddress] = useState('')
@@ -48,12 +49,13 @@ const fetchNftsForcollection = async () => {
   method: 'GET',
   redirect: 'follow'
 };
-  const apiKey = "G7dMgOjXxpPwAYYkgQ7_TxZD9JNs18PI";
-const baseURL = `https://eth-mainnet.alchemyapi.io/nft/v2/${apiKey}/getNFTs/`;
+  const apiKey = "";
+const baseURL = `https://eth-mainnet.alchemyapi.io/nft/v2/${apiKey}/getNFTsForCollection//`;
 const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}`
 const nfts= await fetch(fetchURL , requestOptions).then(data => data.json())
 if(nfts){
   console.log("NFTS COLLECTION" , nfts)
+  setnfts(nfts.nfts)
 }
 
 
@@ -78,6 +80,13 @@ if(nfts){
   }
 }>LetsGO</button>
   </div>
+  <div>{
+    NFTS.length && NFTS.map(nft => {
+      return 
+    <NftCard nft = {nft} ></NftCard>
+    })
+    
+    }</div>
     </div>
   )
 }
