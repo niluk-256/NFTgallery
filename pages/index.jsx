@@ -16,7 +16,7 @@ let nfts;
 
 console.log("fetching nfts")
 // Replace with your Alchemy API key:
-const apiKey = "G7dMgOjXxpPwAYYkgQ7_TxZD9JNs18PI";
+const apiKey = "";
 const baseURL = `https://eth-mainnet.alchemyapi.io/nft/v2/${apiKey}/getNFTs/`;
 //
 if(!collection.length){
