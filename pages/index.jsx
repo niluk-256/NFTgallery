@@ -51,7 +51,7 @@ const fetchNftsForcollection = async () => {
   method: 'GET',
   redirect: 'follow'
 };
-  const apiKey = "G7dMgOjXxpPwAYYkgQ7_TxZD9JNs18PI";
+  const apiKey = "";
 const baseURL = `https://eth-mainnet.alchemyapi.io/nft/v2/${apiKey}/getNFTsForCollection//`;
 const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}`
 const nfts= await fetch(fetchURL , requestOptions).then(data => data.json())
