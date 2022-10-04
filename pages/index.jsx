@@ -78,7 +78,7 @@ if(nfts){
 
 
   return (
-   <div>
+   <div className='bg-blue-100'>
     <div className=''>
       <NAVIGATION />
     </div>
@@ -99,7 +99,7 @@ if(nfts){
     }
     else fetchNfts()
   }
-}><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+}><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
   </div>
   <div className=" flex flex-wrap gap-y-12 mt-3  gap-x-2 justify-center h-2/4 w-2/4">{
     NFTS.length && NFTS.map(nft => {
