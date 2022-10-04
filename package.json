@@ -1,6 +1,6 @@
 {
   "private": true,
-  "homepage": "https://niluk-256.github.io",
+  "homepage": "https://niluk-256.github.io/nftgallery",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
