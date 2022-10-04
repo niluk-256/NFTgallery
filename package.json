@@ -4,9 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "next start"
+    
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
