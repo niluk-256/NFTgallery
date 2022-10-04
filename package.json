@@ -1,13 +1,17 @@
 {
   "private": true,
+  "homepage": "https://niluk-256.github.io",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d build"
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
     "dotenv": "^16.0.3",
+    "gh-pages": "^4.0.0",
     "next": "latest",
     "react": "18.1.0",
     "react-bootstrap": "^2.5.0",
