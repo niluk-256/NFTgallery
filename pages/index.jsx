@@ -26,7 +26,7 @@ let nfts;
 
 console.log("fetching nfts")
 // Replace with your Alchemy API key:
-const apiKey = "G7dMgOjXxpPwAYYkgQ7_TxZD9JNs18PI";
+const apiKey = process.env.APIKEY;
 const baseURL = `https://eth-mainnet.alchemyapi.io/nft/v2/${apiKey}/getNFTs/`;
 //
 if(!collection.length){
@@ -61,7 +61,7 @@ const fetchNftsForcollection = async () => {
   method: 'GET',
   redirect: 'follow'
 };
-  const apiKey = "G7dMgOjXxpPwAYYkgQ7_TxZD9JNs18PI";
+  const apiKey = process.env.APIKEY;
 const baseURL = `https://eth-mainnet.alchemyapi.io/nft/v2/${apiKey}/getNFTsForCollection//`;
 const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}`
 const nfts= await fetch(fetchURL , requestOptions).then(data => data.json())
@@ -78,14 +78,14 @@ if(nfts){
 
 
   return (
-   <div className='bg-blue-100'>
+   <div className='bg-gray-600'>
     <div className=''>
       <NAVIGATION />
     </div>
-    <div className="flex min-h-screen flex-col items-center justify-center py-3 ">
+    <div className="flex  min-h-screen flex-col items-center justify-center py-1 ">
     
      
-<h1 class="mb-4 font-medium leading-tight text-5xl mt-0  text-blue-600" >NFT GALLERY</h1>
+<h1 class="mb-4 font-medium leading-tight text-5xl mt-0  text-blue-400" >NFT GALLERY</h1>
   <div className= 'gap-1'>
 
    <input disabled={isFetchforcollection} className=" mr-2 appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name"  onChange={(e)=>{setwalletaddress(e.target.value)}} value = {wallet} type="text" placeholder='Add your wallet'/>
@@ -101,7 +101,7 @@ if(nfts){
   }
 }><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
   </div>
-  <div className=" flex flex-wrap gap-y-12 mt-3  gap-x-2 justify-center h-2/4 w-2/4">{
+  <div className=" flex flex-wrap gap-y-12 mt-3 justify-center gap-x-2 h-2/4 w-2/4 ">{
     NFTS.length && NFTS.map(nft => {
    
     return (
